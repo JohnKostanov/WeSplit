@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10CE5A12A4070F1007DCF23 /* BillSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE5A02A4070F1007DCF23 /* BillSplit.swift */; };
+		E10CE5A32A407348007DCF23 /* BillDelimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE5A22A407348007DCF23 /* BillDelimiter.swift */; };
+		E10CE5A52A40844B007DCF23 /* BillSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CE5A42A40844B007DCF23 /* BillSplitView.swift */; };
 		E1A11BA2263D19740085BCE6 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A11BA1263D19740085BCE6 /* WeSplitApp.swift */; };
-		E1A11BA4263D19740085BCE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A11BA3263D19740085BCE6 /* ContentView.swift */; };
 		E1A11BA6263D19750085BCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A11BA5263D19750085BCE6 /* Assets.xcassets */; };
 		E1A11BA9263D19750085BCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A11BA8263D19750085BCE6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E10CE5A02A4070F1007DCF23 /* BillSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplit.swift; sourceTree = "<group>"; };
+		E10CE5A22A407348007DCF23 /* BillDelimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDelimiter.swift; sourceTree = "<group>"; };
+		E10CE5A42A40844B007DCF23 /* BillSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitView.swift; sourceTree = "<group>"; };
 		E1A11B9E263D19740085BCE6 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A11BA1263D19740085BCE6 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
-		E1A11BA3263D19740085BCE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1A11BA5263D19750085BCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A11BA8263D19750085BCE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E1A11BAA263D19750085BCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,6 +37,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E10CE59A2A406DDB007DCF23 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E10CE59B2A406DE6007DCF23 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E10CE59C2A406E1D007DCF23 /* MainScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E10CE59C2A406E1D007DCF23 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				E10CE59F2A406EE7007DCF23 /* Model */,
+				E10CE59E2A406EBF007DCF23 /* ModelView */,
+				E10CE59D2A406E5C007DCF23 /* View */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		E10CE59D2A406E5C007DCF23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E10CE5A42A40844B007DCF23 /* BillSplitView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E10CE59E2A406EBF007DCF23 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				E10CE5A22A407348007DCF23 /* BillDelimiter.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		E10CE59F2A406EE7007DCF23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E10CE5A02A4070F1007DCF23 /* BillSplit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E1A11B95263D19740085BCE6 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +105,9 @@
 		E1A11BA0263D19740085BCE6 /* WeSplit */ = {
 			isa = PBXGroup;
 			children = (
+				E10CE59B2A406DE6007DCF23 /* Scenes */,
+				E10CE59A2A406DDB007DCF23 /* App */,
 				E1A11BA1263D19740085BCE6 /* WeSplitApp.swift */,
-				E1A11BA3263D19740085BCE6 /* ContentView.swift */,
 				E1A11BA5263D19750085BCE6 /* Assets.xcassets */,
 				E1A11BAA263D19750085BCE6 /* Info.plist */,
 				E1A11BA7263D19750085BCE6 /* Preview Content */,
@@ -138,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A11BA4263D19740085BCE6 /* ContentView.swift in Sources */,
+				E10CE5A32A407348007DCF23 /* BillDelimiter.swift in Sources */,
+				E10CE5A52A40844B007DCF23 /* BillSplitView.swift in Sources */,
 				E1A11BA2263D19740085BCE6 /* WeSplitApp.swift in Sources */,
+				E10CE5A12A4070F1007DCF23 /* BillSplit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +328,7 @@
 				DEVELOPMENT_TEAM = 5K285D3RL3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WeSplit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +350,7 @@
 				DEVELOPMENT_TEAM = 5K285D3RL3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WeSplit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
