@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     @State private var checkAmount = ""
     @State private var numberOfPeople = 2
-    @State private var tipPercentage = 2
+    @State private var currentPercentage = 20
     let tipPercentages = [10, 15, 20, 25, 0]
     var totalPerPerson: Double {
         // calculate the total per person here
         let peopleCount = Double(numberOfPeople + 2)
-        let tipSelection = Double(tipPercentages[tipPercentage])
+        let tipSelection = Double(currentPercentage)
         let orderAmount = Double(checkAmount) ?? 0
 
         let tipValue = orderAmount / 100 * tipSelection
@@ -39,9 +39,9 @@ struct ContentView: View {
                     }
                 }
                 Section(header: Text("How much tip do you want to leave?")) {
-                    Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(0 ..< tipPercentages.count) {
-                            Text("\(tipPercentages[$0])%")
+                    Picker("Tip percentage", selection: $currentPercentage) {
+                        ForEach(tipPercentages, id: \.self) {
+                            Text("\($0)%")
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
