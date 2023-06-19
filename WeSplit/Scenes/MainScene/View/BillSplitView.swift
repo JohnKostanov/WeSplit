@@ -30,9 +30,9 @@ struct BillSplitView: View {
                             Text("\($0)%")
                         }
                     }
-                    .pickerStyle(SegmentedPickerStyle())
+                    .pickerStyle(.segmented)
                 }
-                Section {
+                Section(header: Text("Amount per person")) {
                     Text("$\(billDelimiter.getTotalPerPerson(), specifier: "%.2f")")
                 }
             }

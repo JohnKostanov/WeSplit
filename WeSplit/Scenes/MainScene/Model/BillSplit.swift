@@ -18,5 +18,5 @@ struct BillSplit: BillSplitable {
     var checkAmount: String
     var numberOfPeople: Int
     var currentPercentage: Int
-    var tipPercentages: [Int]
+    let tipPercentages: [Int]
 }

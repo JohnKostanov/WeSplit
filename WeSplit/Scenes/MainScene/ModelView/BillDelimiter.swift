@@ -10,6 +10,8 @@ import Foundation
 protocol Delimiter: AnyObject, ObservableObject {
     associatedtype Item: BillSplitable
     
+    var billData: Item { get }
+    
     func getTotalPerPerson() -> Double
 }
 
