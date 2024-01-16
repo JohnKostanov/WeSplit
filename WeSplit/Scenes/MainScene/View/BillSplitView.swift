@@ -10,12 +10,14 @@ import SwiftUI
 struct BillSplitView: View {
     
     @StateObject var billDelimiter = BillDelimiter()
+    @FocusState private var amountIsFocused: Bool
     
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Amount", text: $billDelimiter.billData.checkAmount)
+                        .focused($amountIsFocused)
                         .keyboardType(.decimalPad)
 
                     Picker("Number of people", selection: $billDelimiter.billData.numberOfPeople) {
@@ -37,6 +39,13 @@ struct BillSplitView: View {
                 }
             }
             .navigationBarTitle("WeSplit")
+            .toolbar {
+                if amountIsFocused {
+                    Button("Done") {
+                        amountIsFocused = false
+                    }
+                }
+            }
         }
     }
 }
